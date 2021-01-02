@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Reza">
+		<title>Reza</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/webpage_content_style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		
+	<script>
+		function show(title) {
+			/*var title = $(obj).attr('title');*/
+			// Get the container element
+			var menuContainer = document.getElementById("nav");
+			// Get all page links with class="pagelinks" inside the container
+			var pagelinks = menuContainer.getElementsByClassName("pagelinks");
+			
+			// Loop through the pagelinks and add the active class to the current/clicked button
+			for (var i = 0; i < pagelinks.length; i++) {
+			  pagelinks[i].addEventListener("click", function() {
+				var current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			  });
+			}
+			$(".right_panel").empty();
+			$(".right_panel")[0].innerHTML = $("." + title)[0].innerHTML;
+		}
+	</script>
+	</head>
+
+	<body onload=show('home')>
+	<!-- Main Header definition with Title and Navigation Bar -->
+	<div class="container">
+		<div class="title_header">
+			<h1>Reza's Webpage</h1>
+		</div>
+		<div id="nav" class="menu_header">
+			<a href="#" title="home" class="pagelinks" onClick="show('home')"> <i class="fa fa-home active" style="font-size:20px;"></i><b> Home </b></a>
+			<!-- a href="#" title="education" class="pagelinks" onClick="show('education')"> <i class="fa fa-graduation-cap" style="font-size:20px;"></i><b> Education </b></a-->
+			<a href="#" title="publications" class="pagelinks"> <i class="fa fa-file-text-o" style="font-size:20px;"></i><b> Publications </b></a>
+			<a href="#" title="research_exp" class="pagelinks"> <i class="fa fa-bar-chart" style="font-size:20px;"></i><b> Research </b></a>
+			<a href="#" title="gallery" class="pagelinks"> <i class="fa fa-picture-o" style="font-size:20px;"></i><b> Gallery </b></a>
+		</div>
+	</div>
+	<hr>
+
+
+
+	<div class="main_content">
+			<!-- Left Panel definition with Profile picture and other links -->
+			<div class="left_panel">
+				<div class="left_panel_profile_pic" style="margin-top:15px; text-align:center;">
+					<img src="resources/pro_pic.png" alt="Avatar">
+				</div>
+				<div class="left_panel_curr_info">
+					<p style="color:white; font-size:18px; text-decoration: none; margin-left: 10px;">
+					<i class="fa fa-user" style="font-size:20px; color:white;"></i> &nbsp;&nbsp;Research Assistant <br> 
+					<i class="fa fa-map-marker" style="font-size:20px;"></i> &nbsp;&nbsp;Chair for Robotics, AI and Real-time Systems <br> 
+					<i class="fa fa-institution" style="font-size:16px;"></i> &nbsp;Technical University of Munich, Germany
+					</p>
+				</div>
+
+				<div class="left_panel_sns_info" style="text-align:center;">
+					<a href="https://github.com/rezaurrakib" target="_blank"><i class="fa fa-github active" style="color: #0070C0; font-size:40px;"></i></a>
+					<a href="https://www.linkedin.com/in/rezaurrakib/" target="_blank"><i class="fa fa-linkedin active" style="color: #0070C0; font-size:40px;"></i></a>
+					<a href="https://twitter.com/RezaMRahman" target="_blank"><i class="fa fa-twitter active" style="color: #0070C0; font-size:40px;"></i></a>
+					<a href="https://scholar.google.com/citations?user=XsGEzPcAAAAJ&hl=en" target="_blank"><i class="fa fa-book active" style="color: #0070C0; font-size:40px;"></i></a>
+				</div>
+				<br>
+				<div class="left_panel_cv_contact">
+					<p style="color:white; font-size:18px; text-decoration: none; margin-left: 10px;">
+					<i class="fa fa-file-text active" style="color: #0070C0; font-size:18px;"></i>&nbsp;&nbsp; Curriculum Vitae <br>
+					<i class="fa fa-envelope-open active" style="color: #0070C0; font-size:18px;"></i>&nbsp;&nbsp; reza dot rahman (at) tum dot de 
+					</p>
+				</div>
+				<br>
+				
+				<div class="left_panel_glossary">
+				<p style="color:white; font-size:18px; text-decoration: none; margin-left: 10px;">
+				<i class="fa fa-film" style="color: #0070C0; font-size:18px;"></i>&nbsp;&nbsp; 3D Vision Glossary
+				<ul style="color:#0070C0;">
+					<li><a href="https://3dgv.github.io/" target="_blank" style="color:#0070C0;"> Seminar on 3D Geometry and Vision </a></li>
+					<li><a href="https://scene-understanding.com/talks.html" target="_blank" style="color:#0070C0;"> 3D Scene Understanding for VGR (CVPR 2020) </a></li>
+					<li><a href="https://learn3dgen.github.io/#accepted" target="_blank" style="color:#0070C0;"> Learning 3D Generative Models (CVPR 2020) </a></li>
+				</ul>
+				</p>
+				</div>
+			</div>
+
+			<!-- Right Panel definition -->
+			<div class="right_panel">
+
+			</div>
+	</div>
+	
+	<div class="home" style="display:none">
+		<object data="pages/about.html"></object>
+	</div>
+
+	<div class="education" style="display:none">
+		<object data="pages/education.html"></object>
+	</div>
+
+	</body>
+
+</html>
