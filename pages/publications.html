@@ -1,26 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">	
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/navbar_style.css">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Reza">
+		<title>Reza</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/publications_style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	
 
+	<style>
+	table {
+		font-family: arial, sans-serif;
+		/*border-collapse: collapse;*/
+		margin-right: 30px;
+		margin-top:0px;
+	}
 
-<div class="topnav"> 
-  <b><a href="../index.html">Md Rezaur Rahman</a></b>
+	td{
+		/*border: 1px solid red;*/
+		text-align: left;
+		margin-left: 10px;
+	}
+	hr {
+		border: none;
+		height: 1px;
+		
+		margin-left: 0px;
+		margin-right: 30px;
+		/* Set the hr color */
+		/* color: #0070C0; /* old IE */
+		background-color: #C0C0C0; /* Modern Browsers */
+	}
 
- <div class='topnav-right'>
-  <a href="../index.html">Home</a>
-  <a href="education.html">Education</a>
-  <a class="active" href="publications.html">Publications</a>
-  <a href="research_exp.html">Research Experiences</a>
-  <a href="contact.html" class="right">Contact</a>
- </div>
-</div>
+	</style>
 
+	<script>
+		function changeImage(div_id, filepath)
+		{
+			var curr_div = document.getElementById(div_id);
+			var images = document.images.namedItem(filepath).src;
+			/*var images = ["1.PNG","2.PNG"];
+			var index=0;
+			im.setAttribute(filepath, images[index]);
+			index++;
+			if(index >= images.length)
+			{
+				index=0;
+			}*/
+			document.getElementById("demo").innerHTML = images[1];
+		}
+
+		/*setInterval(changeImage, 2000);*/
+	</script>
+	</head>
 
 <body>
+	<div>
+		<div style="font-size:22px; background-color: #800080; margin-right: 30px;">
+		<b style="margin-left: 30px; color:white;">2020</b>
+		</div>
+		<hr>
+		<table class="publications">
+		<tr>
+		<td style="padding:8px;">
+			<div class="paper_img">
+				<img src="../resources/publications/pcn_hierarchical_feat/img01.PNG" style="width:150px; height:150px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);" alt="Avatar">
+			</div>
+		</td>
+		<td><b style="color:#00458c;"><article style="font-size:15px;">Dense Point Completion Network with Hierarchical Feature Processing.</article></b>
+		<i><article style="font-size:15px;"><b>Md Rezaur Rahman</b>, Muhammad Mushfiqur Rahman, Adnane Jadid, and Gudrun Klinker.</article></i>
+		<article style="font-size:15px;">arXiv preprints available soon, 2021.</article>
+		<article style="font-size:14px; text-align:justify"><b>Abstract:</b> We propose a hierarchical learning-based approach for the shape 
+						completion task, that directly operates on raw point clouds. It incorporates an encoder-decoder structure to complete the
+						partial point clouds in two stages. It exploits a joint loss function to minimize the distance between the predicted and 
+						output point clouds.</article>
+		<br>
+		<i class="fa fa-file-pdf-o" style="color:#0070C0"></i> <b>[pdf]</b>
+		</td>
+		</tr>
+		</table>
+		
+		<br> <!-- Break between two tables -->
+		<!-- Publication list: 2018 -->
 
-
+		<div style="font-size:22px; background-color: #800080; margin-right: 30px;">
+		<b style="margin-left: 30px; color:white;">2018</b>
+		</div>
+		<hr>
+		<table class="publications">
+		<tr>
+		<td style="padding:8px;">
+			<div class="paper_img" >
+				<img id="pairika-loop" src="../resources/publications/pairika/img01.PNG" style="width:150px; height:150px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);" alt="Avatar">
+			</div>
+		</td>
+		<td><b style="color:#00458c;"><article style="font-size:15px;">Pairika: A Failure Diagnosis Benchmark for C++ Programs.</article></b>
+		<i><article style="font-size:15px;"><b>Md Rezaur Rahman</b>, Mojdeh Golagha, and Alexander Pretschner.</article></i>
+		<article style="font-size:15px;">International Conference on Software Engineering (ICSE), Gothenburg, Sweden, 2018.</article>
+		<article style="font-size:14px; text-align:justify"><b>Abstract:</b> We presents Pairika, a failure diagnosis benchmark for C++ programs. 
+						Pairika contains 40 bugs extracted from seven modules of OpenCV project with more than 490 KLoC and 11129 tests. 
+						Each bug is accompanied by at least one failing test. We publish Pairika to facilitate and stimulate further research on 
+						automated failure diagnosis techniques.  </article>
+		<br>
+		<i class="fa fa-file-pdf-o" style="color:#0070C0; font-size:15px;"></i> <a href="https://drive.google.com/file/d/1KlV7wtMHg95BfrTUvA5JblxzTLQVvNbi/view" target="_blank"><b style="font-size:15px;">[pdf]</b></a>
+		&nbsp;<i class="fa fa-globe" style="color:#0070C0"></i> <a href="https://github.com/tum-i4/Pairika" target="_blank"><b style="font-size:15px;">[Project Wiki]</b></a>
+		&nbsp;<i class="fa fa-github" style="color:#0070C0"></i> <a href="https://github.com/tum-i4/Pairika/wiki/Pairika-WiKi" target="_blank"><b style="font-size:15px;">[GitHub]</b></a>
+		</td>
+		</tr>
+		<tr>
+		<td style="padding:8px;">
+			<div class="paper_img" >
+				<img src="../resources/publications/untraceable_bs_ijns/img01.PNG" style="width:150px; height:150px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);" alt="Avatar">
+			</div>
+		</td>
+		<td><b style="color:#00458c;"><article style="font-size:15px;">An Untraceable Voting Scheme Based on Pairs of Signatures.</article></b>
+		<i><article style="font-size:15px;">K. M. Rokibul Alam, Adnan Maruf, <b>Md Rezaur Rahman</b>, G. G. Md. Nawaz Ali, Peter H. J. Chong, and Y. Morimoto.</article></i>
+		<article style="font-size:15px;">International Journal of Network Security (IJNS), Vol 20, No. 4, pp. 774-787, 2018.</article>
+		<article style="font-size:14px; text-align:justify"><b>Abstract:</b> We proposed a novel e-voting scheme that leverages two pairs of signatures of signing (election) 
+					authorities. One pair of signatures on each voter’s same blinded token enables to anonymously appear to authorities in 
+					consecutive election stages. The other signature pair on voter’s blinded vote qualify the authorities 
+					to prevent deception from voters.</article>
+		<br>
+		<i class="fa fa-file-pdf-o" style="color:#0070C0"></i> <a href="http://ijns.jalaxy.com.tw/contents/ijns-v20-n4/ijns-2018-v20-n4-p774-787.pdf" target="_blank"><b>[pdf]</b></a>
+		</td>
+		</tr>
+		</table>
+	</div>
 
 
 </body>
